@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import Gnome from '../components/Gnome';
 import InstallButton from '../components/InstallButton';
 import PlantArt from '../components/PlantArt';
+import ThemeToggle from '../components/ThemeToggle';
 import { BrandMark } from '../components/AppHeader';
 import { useGame } from '../contexts/useGame';
 import { getPlant } from '../data/plants';
@@ -36,6 +37,7 @@ export default function WelcomeScreen() {
           <Link to="/about" className="text-link">
             How it works
           </Link>
+          <ThemeToggle />
           <InstallButton compact />
         </div>
       </header>

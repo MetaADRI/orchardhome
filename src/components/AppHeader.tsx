@@ -2,6 +2,7 @@ import { Flame, Home, Info, Library, Sparkles, TrendingUp, Trophy } from 'lucide
 import { Link, NavLink } from 'react-router-dom';
 import { useGame } from '../contexts/useGame';
 import InstallButton from './InstallButton';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
   { to: '/home', label: 'Home', icon: Home },
@@ -65,6 +66,7 @@ export default function AppHeader() {
             <span>{xp}</span>
             <span className="stat-pill__unit">XP</span>
           </div>
+          <ThemeToggle />
           <InstallButton compact />
         </div>
       </div>

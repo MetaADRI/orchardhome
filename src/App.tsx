@@ -8,6 +8,7 @@ import {
 import AppLayout from './components/AppLayout';
 import ScrollReveal from './components/ScrollReveal';
 import { GameProvider } from './contexts/GameContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import AboutScreen from './screens/AboutScreen';
 import CareGuideScreen from './screens/CareGuideScreen';
 import GrowthScreen from './screens/GrowthScreen';
@@ -73,10 +74,12 @@ function AppRoutes() {
 
 export default function App() {
   return (
-    <GameProvider>
-      <HashRouter>
-        <AppRoutes />
-      </HashRouter>
-    </GameProvider>
+    <ThemeProvider>
+      <GameProvider>
+        <HashRouter>
+          <AppRoutes />
+        </HashRouter>
+      </GameProvider>
+    </ThemeProvider>
   );
 }
